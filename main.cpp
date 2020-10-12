@@ -297,7 +297,6 @@ create_srv(ID3D12Device *dev, ID3D12Resource *res,
 	desc_srv.Shader4ComponentMapping =
 		D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
 	desc_srv.Texture2D.MipLevels = 1;
-	printf("hcpu_srv.ptr=%p\n", hcpu_srv.ptr);
 	dev->CreateShaderResourceView(res, &desc_srv, hcpu_srv);
 	return (0);
 }
@@ -583,7 +582,6 @@ create_gpstate_from_file(ID3D12Device *dev, ID3D12RootSignature *root_sig,
 			return nullptr;
 		}
 	}
-	printf("CREATE PSTATE: fname=%s, %p\n", fname.c_str(), pstate);
 	return (pstate);
 }
 
@@ -609,7 +607,6 @@ create_cpstate_from_file(
 			filename.c_str(), status);
 		return nullptr;
 	}
-	printf("CREATE PSTATE: fname=%s, %p\n", fname.c_str(), pstate);
 	return (pstate);
 }
 
