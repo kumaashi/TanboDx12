@@ -1,2 +1,2 @@
-cl main.cpp /EHsc /Ox /GS- /nologo && dxmain
+cl main.cpp /EHsc /Ox /GS- /nologo && main
 
